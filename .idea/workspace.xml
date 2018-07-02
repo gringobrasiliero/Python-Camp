@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac06f7e5-3cb9-4b86-a2e8-26ac0496d206" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/areYouThirsty.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/marioStairs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pycamp1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tictactoe.py" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoe.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,11 +23,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forloops.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/forloops.py">
+      <file leaf-file-name="despacito.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/despacito.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="98" column="24" lean-forward="true" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
+            <state relative-caret-position="204">
+              <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tictactoe.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tictactoe.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="663">
+              <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -54,6 +61,7 @@
         <option value="$PROJECT_DIR$/pycamp1.py" />
         <option value="$PROJECT_DIR$/pycamp2.py" />
         <option value="$PROJECT_DIR$/forloops.py" />
+        <option value="$PROJECT_DIR$/tictactoe.py" />
       </list>
     </option>
   </component>
@@ -180,10 +188,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/forloops.py">
+    <entry file="file://$PROJECT_DIR$/despacito.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="98" column="24" lean-forward="true" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
+        <state relative-caret-position="204">
+          <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tictactoe.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
         </state>
       </provider>
     </entry>
