@@ -5,15 +5,31 @@ place = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 win_combo = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [6,4,2], [0,4,8]]
 
 def possibleWin():
+    t = 0
     for i in win_combo:
         if place[i[0]] == place[i[1]] or place[i[1]] == place[i[2]] or place[i[0]] == place[i[2]]:
             for c in i:
                 if place[c] != "X" and place[c] != "O":
                     place[c] = "O"
+                    t = 1
+                    return
+    if t == 0:
+        cpu_choice = [4, 8, 0, 2, 6, 3, 5, 7, 1]
+        for i in cpu_choice:
+            if place[i] != "X" and place[i] != "O":
+                place[i] = "O"
+                break
 
 
 # possibleWin()
-
+def draw():
+    spots = [0,1,2,3,4,5,6,7,8]
+    for i in spots:
+        if place[i] != "X" and place[i] != "O":
+            return
+        else:
+            print("Tie Game")
+            again()
 def win():
     for i in win_combo:
         if place[i[0]] == place[i[1]] == place[i[2]] == "X":
@@ -44,11 +60,11 @@ def human_move():
 def cpu_move():
     # cpuMove = randint(0,8)
     possibleWin()
-    cpu_choice = [4, 8, 0, 2, 6, 3, 5, 7, 1]
-    for i in cpu_choice:
-        if place[i] != "X" and place[i] != "O":
-            place[i] = "O"
-            break
+    # cpu_choice = [4, 8, 0, 2, 6, 3, 5, 7, 1]
+    # for i in cpu_choice:
+    #     if place[i] != "X" and place[i] != "O":
+    #         place[i] = "O"
+    #         break
 
 
 def board():
@@ -64,6 +80,7 @@ def game():
     while True:
         board()
         human_move()
+        draw()
         win()
         cpu_move()
         board()
