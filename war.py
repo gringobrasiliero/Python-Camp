@@ -28,8 +28,13 @@ def shuffle():
     left_in_deck -= 1
     x += 1
 
-shuffle()
+def turn():
+    print("Ooof")
 
-print(hHand)
-print("")
-print(cHand)
+
+
+
+def game():
+    shuffle()
+
+game()
