@@ -7,6 +7,7 @@ linkMp = 100
 
 
 def intro():
+    global name
     name = input("I am grateful you are willing to go on this epic adventure. What is your name? ")
     print("======================================================================")
     print("Well " + name + " , take this. It is dangerous to go alone. ")
@@ -115,33 +116,55 @@ def human_move():
         damage = randint(10,20)
         print(name + " used Strike")
         sleep(1)
-        print( name + " did " + damage + " damage.")
+        print( name + " did " + str(damage) + " damage.")
         enemyHp -= damage
-    elif move == "Magic":
+    elif move == "m":
         damage = randint(10, 20)
         print(name + " used magic")
         sleep(1)
-        print(name + " did " + damage + " damage.")
+        print(name + " did " + str(damage) + " damage.")
         enemyHp -= damage
-    elif move == "Heal":
+    elif move == "h":
         damage = randint(30,50)
         print(name + " used magic")
         sleep(1)
         print(name + " healed himself.")
         linkHp += damage
-
+    if enemyHp <= 0:
+        print("You killed Arbok")
+        game()
 
 def enemy_attack():
+    global linkHp
     attack = randint(1,3)
     if attack == 1:
         damage = randint(10, 20)
-        print(name + " used Strike")
+        print("Arbok used bite")
         sleep(1)
-        print(name + " did " + damage + " damage.")
-        enemyHp -= damage
-
+        print("Arbok did " + str(damage) + " damage.")
+        linkHp -= damage
+    elif attack == 2:
+        damage = randint(30, 50)
+        print("Arbok used poison.")
+        sleep(1)
+        print("Arbok did " + str(damage) + " damage.")
+        linkHp -= damage
+    elif attack == 3:
+        damage = randint(10, 20)
+        print("Arbok used Heal.")
+        sleep(1)
+        print("Arbok Healed.")
+        enemyHp += damage
+    if linkHp <= 0:
+        print("You were killed by Arbok. Game over.")
+        game()
 
 def game():
+    enemyHp = 100
+    linkHp = 100
+    linkMp = 100
+
+
     intro()
     enemy()
     while True:
