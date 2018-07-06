@@ -130,7 +130,22 @@ def human_move():
         print(name + " healed himself.")
         linkHp += damage
 
+
+def enemy_attack():
+    attack = randint(1,3)
+    if attack == 1:
+        damage = randint(10, 20)
+        print(name + " used Strike")
+        sleep(1)
+        print(name + " did " + damage + " damage.")
+        enemyHp -= damage
+
+
 def game():
     intro()
     enemy()
+    while True:
+        human_move()
+        enemy_attack()
+
 game()
