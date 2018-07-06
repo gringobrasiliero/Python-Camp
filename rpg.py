@@ -1,3 +1,9 @@
+from time import sleep
+from random import randint
+
+enemyHp = 100
+linkHp = 100
+linkMp = 100
 
 
 def intro():
@@ -97,10 +103,32 @@ H   ====HH= =HHH=HHHHHHHHHHH=HHH= =HH====   H
 
 
 def human_move():
+    global enemyHp
+    global name
+    global linkHp
     print("======================================================================")
-    
-
-
+    print(" Strike       Heal")
+    print(" Magic              ")
+    print("======================================================================")
+    move = input("")
+    if move == "s":
+        damage = randint(10,20)
+        print(name + " used Strike")
+        sleep(1)
+        print( name + " did " + damage + " damage.")
+        enemyHp -= damage
+    elif move == "Magic":
+        damage = randint(10, 20)
+        print(name + " used magic")
+        sleep(1)
+        print(name + " did " + damage + " damage.")
+        enemyHp -= damage
+    elif move == "Heal":
+        damage = randint(30,50)
+        print(name + " used magic")
+        sleep(1)
+        print(name + " healed himself.")
+        linkHp += damage
 
 def game():
     intro()
