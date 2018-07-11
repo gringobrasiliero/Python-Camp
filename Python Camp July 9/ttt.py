@@ -21,9 +21,45 @@ def h_move():
         place[move] = "X"
 
 def c_move():
+    global working
+    working = "nyancat"
+    try_win()
+    try_block()
+    logic()
+
+def try_win():
+    for i in win_combos:
+        if place[i[0]] == place[i[1]] == "O" or place[i[1]] == place[i[2]] == "O" or place[i[0]] == place[i[2]] == "O":
+            for x in i:
+                if place[x] != "O" and place[x] != "X":
+                    place[x] = "O"
+                    board()
+                    judge()
+
+def try_block():
+    global working
+    for i in win_combos:
+        if place[i[0]] == place[i[1]] == "X" or place[i[1]] == place[i[2]] == "X" or place[i[0]] == place[i[2]] == "X":
+            for x in i:
+                if place[x] != "O" and place[x] != "X":
+                    place[x] = "O"
+                    working = "dog"
+                    break
+def logic():
+
+    cpu_placing = [ 4, 0, 2, 6, 8]
+    for i in cpu_placing:
+        if place[i] != "O" and place[i] != "X":
+            place[i] = "O"
+            working = "dog"
+            break
+    if working == "nyancat":
+        random()
+
+def random():
     move = randint(0,8)
-    if place[move] == "X" or place[move] == "O":
-        c_move()
+    if place[move] != "X" or place[move] != "O":
+        logic()
     else:
         place[move] = "O"
 
