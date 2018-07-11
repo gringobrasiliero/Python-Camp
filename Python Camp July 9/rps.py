@@ -1,6 +1,7 @@
 from random import choice
 
 def human_move():
+    global human
     human = input("Rock, Paper, or Scissors (r,p,s)")
     if human == "p":
         human = "Paper"
@@ -11,12 +12,14 @@ def human_move():
     else:
         print("Invalid input: Use r, p, or s")
         human_move()
-
+    return human
 
 def cpu_move():
+    global cpu
     x = ["Paper", "Rock", "Scissors"]
     cpu = choice(x)
-
+    print(cpu)
+    return cpu
 
 def judge():
     if human == cpu:
@@ -28,14 +31,20 @@ def judge():
     elif human == "Paper" and cpu == "Rock":
         print("Human Wins")
     elif cpu == "Scissors" and human == "Paper":
-        print("Human Wins")
+        print("CPU Wins")
     elif cpu == "Rock" and human == "Scissors":
-        print("Human Wins")
+        print("CPU Wins")
     elif cpu == "Paper" and human == "Rock":
-        print("Human Wins")
-    
+        print("CPU Wins")
+
 
 def game():
-    human_move()
-    cpu_move()
 
+    while True:
+        human_move()
+        cpu_move()
+        print("Human: " + str(human) + " VS " + "CPU: " + str(cpu))
+        judge()
+
+
+game()
