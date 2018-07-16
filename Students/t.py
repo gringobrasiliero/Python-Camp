@@ -13,16 +13,29 @@ for i in card_num:
 print(deck)
 print(len(deck))
 
-x = 1
-while x <= 7:
-    randCard = randint(0,51)
-    hHand.append(deck[randCard])
-
-    randCard = randint(0, 51)
-    cHand.append(deck[randCard])
-    x += 1
 
 
+def begin():
+    x = 1
+    cards_left = 54
+    while x <= 7:
+        randCard = randint(0,cards_left)
+        hHand.append(deck[randCard])
+        deck.pop(randCard)
+        cards_left -= 1
+
+        randCard = randint(0, cards_left)
+        cHand.append(deck[randCard])
+        deck.pop(randCard)
+        cards_left -= 1
+        x += 1
+
+begin()
+
+def hMove():
+    guess = input("What is your guess?")
+    for i in cHand():
+        if i[1:] == ""
 
 
 

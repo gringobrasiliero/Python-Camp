@@ -1,5 +1,8 @@
+
 import time
 from random import randint
+hHp = 100
+cHp = 100
 
 def intro():
     name = input("What is your name? ")
@@ -59,7 +62,24 @@ def h_move():
         print("Cat used Magic")
         cHp -= randint(10, 25)
 
+def cpu_move():
+    time.sleep(2)
+    move = randint(1,3)
+    if move == 1:
+        print("Lore ipsum dolor")
+    elif move == 2:
+        print("Howdy")
+    elif move == 3:
+        print("Como estas amigo!")
+
+
+
+
+
 def game():
+    global hHP
+    global hMp
+    global cHp
     intro()
     enemy()
     h_move()
