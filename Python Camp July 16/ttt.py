@@ -1,3 +1,5 @@
+from random import randint
+
 place = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 def board():
@@ -10,9 +12,14 @@ def h_Move():
     place[move] = "X"
 
 
+def c_move():
+    move = randint(0,8)
+    place[move] = "O"
+
+
 def game():
     while True:
         board()
         h_Move()
-
+        c_move()
 game()
